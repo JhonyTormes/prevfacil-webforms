@@ -13,6 +13,12 @@ namespace PrevFacil.Web
 
         protected void btnSimular_Click(object sender, EventArgs e)
         {
+            if (Session["UsuarioLogado"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+                return;
+            }
+
             if (string.IsNullOrEmpty(txtValorMensal.Text) || string.IsNullOrEmpty(txtAnos.Text))
             {
                 return;

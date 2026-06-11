@@ -12,7 +12,13 @@ namespace PrevFacil.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (Session["UsuarioLogado"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+                return;
+            }
+
+            if (!IsPostBack)
             {
                 CarregarDadosDoAssociado();
             }
