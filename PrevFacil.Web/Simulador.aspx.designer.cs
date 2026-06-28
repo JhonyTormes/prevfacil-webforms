@@ -17,55 +17,61 @@ namespace PrevFacil.Web
         /// <summary>
         /// Controle txtValorMensal.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtValorMensal;
 
         /// <summary>
         /// Controle txtAnos.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAnos;
 
         /// <summary>
         /// Controle btnSimular.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSimular;
 
         /// <summary>
         /// Controle pnlResultado.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlResultado;
 
         /// <summary>
         /// Controle lblTempoResultado.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTempoResultado;
 
         /// <summary>
         /// Controle lblSaldoResultado.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSaldoResultado;
+
+        /// <summary>
+        /// Controle lblErro.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Label lblErro;
+
+        /// <summary>
+        /// Controle rfvValorMensal.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvValorMensal;
+
+        /// <summary>
+        /// Controle cvValorMensal.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.CompareValidator cvValorMensal;
+
+        /// <summary>
+        /// Controle rfvAnos.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAnos;
+
+        /// <summary>
+        /// Controle rvAnos.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.RangeValidator rvAnos;
+
+        /// <summary>
+        /// Controle vsSummary.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsSummary;
     }
 }

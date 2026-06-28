@@ -19,13 +19,27 @@ namespace PrevFacil.Web
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtValorMensal.Text) || string.IsNullOrEmpty(txtAnos.Text))
+            lblErro.Visible = false;
+
+            if (!Page.IsValid)
             {
                 return;
             }
 
-            decimal valorMensal = Convert.ToDecimal(txtValorMensal.Text);
-            int anos = Convert.ToInt32(txtAnos.Text);
+            if (!decimal.TryParse(txtValorMensal.Text, out decimal valorMensal) || valorMensal <= 0)
+            {
+                lblErro.Text = "Valor mensal inválido. Digite um número positivo.";
+                lblErro.Visible = true;
+                return;
+            }
+
+            if (!int.TryParse(txtAnos.Text, out int anos) || anos < 1 || anos > 100)
+            {
+                lblErro.Text = "Número de anos inválido. Digite um valor entre 1 e 100.";
+                lblErro.Visible = true;
+                return;
+            }
+
             int totalMeses = anos * 12;
 
             SimuladorService simulador = new SimuladorService();
