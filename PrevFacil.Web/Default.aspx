@@ -7,6 +7,8 @@
         <p class="lead">Confira abaixo o resumo do seu plano de previdência complementar.</p>
     </div>
 
+    <asp:Label ID="lblErro" runat="server" CssClass="alert alert-danger" Visible="false" />
+
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default" style="padding: 20px; border: 1px solid #ddd; border-radius: 4px;">

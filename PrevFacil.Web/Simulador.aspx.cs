@@ -40,15 +40,23 @@ namespace PrevFacil.Web
                 return;
             }
 
-            int totalMeses = anos * 12;
+            try
+            {
+                int totalMeses = anos * 12;
 
-            SimuladorService simulador = new SimuladorService();
-            decimal saldoFinal = simulador.SimularSaldoFuturo(valorMensal, totalMeses);
+                SimuladorService simulador = new SimuladorService();
+                decimal saldoFinal = simulador.SimularSaldoFuturo(valorMensal, totalMeses);
 
-            lblTempoResultado.Text = anos.ToString();
-            lblSaldoResultado.Text = saldoFinal.ToString("C");
+                lblTempoResultado.Text = anos.ToString();
+                lblSaldoResultado.Text = saldoFinal.ToString("C");
 
-            pnlResultado.Visible = true;
+                pnlResultado.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                lblErro.Text = $"Erro ao calcular a projeção: {ex.Message}";
+                lblErro.Visible = true;
+            }
         }
     }
 }

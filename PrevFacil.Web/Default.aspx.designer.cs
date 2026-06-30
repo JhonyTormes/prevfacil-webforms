@@ -17,37 +17,26 @@ namespace PrevFacil.Web
         /// <summary>
         /// Controle lblNomePlano.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNomePlano;
 
         /// <summary>
         /// Controle lblInscricao.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblInscricao;
 
         /// <summary>
         /// Controle lblContribuicao.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblContribuicao;
 
         /// <summary>
         /// Controle lblSaldo.
         /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSaldo;
+
+        /// <summary>
+        /// Controle lblErro.
+        /// </summary>
+        protected global::System.Web.UI.WebControls.Label lblErro;
     }
 }
