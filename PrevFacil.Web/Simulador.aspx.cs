@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Web.UI;
 using PrevFacil.Web.Business;
 
@@ -45,6 +46,13 @@ namespace PrevFacil.Web
                 int totalMeses = anos * 12;
 
                 SimuladorService simulador = new SimuladorService();
+
+                string taxaConfig = ConfigurationManager.AppSettings["TaxaJurosMensal"];
+                if (decimal.TryParse(taxaConfig, out decimal taxaConfigurada))
+                {
+                    simulador.TaxaJurosMensal = taxaConfigurada;
+                }
+
                 decimal saldoFinal = simulador.SimularSaldoFuturo(valorMensal, totalMeses);
 
                 lblTempoResultado.Text = anos.ToString();

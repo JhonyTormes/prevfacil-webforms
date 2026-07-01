@@ -92,5 +92,36 @@ namespace PrevFacil.Web.Tests.Business
 
             Assert.That(resultado, Is.EqualTo(-402m).Within(0.001m));
         }
+
+        [Test]
+        public void SimularSaldoFuturo_ComTaxaPersonalizada_DeveUsarTaxaConfigurada()
+        {
+            _service.TaxaJurosMensal = 0.01m;
+
+            decimal resultado = _service.SimularSaldoFuturo(100m, 1);
+
+            Assert.That(resultado, Is.EqualTo(101.00m).Within(0.001m));
+        }
+
+        [Test]
+        public void SimularSaldoFuturo_TaxaZero_DeveRetornarApenasContribuicoes()
+        {
+            _service.TaxaJurosMensal = 0m;
+
+            decimal resultado = _service.SimularSaldoFuturo(100m, 12);
+
+            Assert.That(resultado, Is.EqualTo(1200m));
+        }
+
+        [Test]
+        public void SimularSaldoFuturo_ComTaxaAlta_DeveCrescerMaisRapido()
+        {
+            decimal resultadoTaxaPadrao = _service.SimularSaldoFuturo(100m, 12);
+
+            _service.TaxaJurosMensal = 0.02m;
+            decimal resultadoTaxaAlta = _service.SimularSaldoFuturo(100m, 12);
+
+            Assert.That(resultadoTaxaAlta, Is.GreaterThan(resultadoTaxaPadrao));
+        }
     }
 }
